@@ -1,0 +1,23 @@
+.quiz-question.js-quizQuestion
+  .quiz-question_title
+    = question.title
+    .quiz-question_number
+      span = questionIndex
+      = totalQuestions
+
+  .quiz-question_desc = question.description
+
+  if question.logo_url
+    img.quiz-question_pic(src=question.logo_url)
+
+  ul.quiz-answers.js-quizAnswers
+    each question.options
+      if text
+        li.quiz-answers_item.js-quizAnswer
+          .checkbox = text
+
+          .quiz-answers_item_right
+            .quiz-answers_item_percentage = percentage
+          .quiz-answers_item_desc {{ ../question.comment }}
+
+  a.quiz-question_confirm.js-quizNext.is-disabled href='#' Продолжить
