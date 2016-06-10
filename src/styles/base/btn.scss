@@ -1,0 +1,130 @@
+$card-shadow: 0 5px 10px rgba(0, 0, 0, 0.09);
+$border-radius: 4px;
+// BASE
+// -------------------------
+$text-main-family: "Proxima Nova", "Helvetica CY", "Trebuchet MS", Arial, sans-serif;
+
+$text-color: #333;
+$title-color: rgb(0,0,0);
+$link-color: $text-color;
+$link-color-hover: #2b88d9;
+
+$main-bg: #f4f4f4;
+$brand-bg: #bd302a;
+$brand-border-color: #BD3025;
+$brand-color: $brand-bg;
+
+$border-radius: 4px;
+
+$light-gray: #ccc;
+$medium-gray: #999;
+$dark-gray: #666;
+$black: #333;
+$success-color: #78a300;
+$secondary-color: #2b88d9;
+$info-bg: #fef0ba;
+$info-border-color: #f0e3af;
+
+$border-gray: #999;
+$border-light-gray: #e5e5e5;
+
+@mixin shadow-hoverable {
+  transition: 0.2s box-shadow;
+
+  &:hover {
+    box-shadow: $card-shadow;
+  }
+}
+
+@mixin core-btn {
+  display: inline-block;
+  border: 1px solid transparent;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  user-select: none;
+  text-decoration: none;
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  touch-action: manipulation;
+  appearance: none;
+  text-decoration: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+%btn-base {
+  @include core-btn;
+  @include shadow-hoverable;
+  padding: 6px 15px 8px;
+  border-radius: $border-radius;
+  line-height: 20px;
+  font-size: 15px;
+  cursor: pointer;
+  text-transform: none;
+  font-weight: 400;
+  transition: 0.2s background, 0.2s box-shadow;
+
+  @include lp(768) {
+    width: 100%;
+  }
+}
+
+%btn-skin-red {
+  background: $brand-bg;
+  border-color: $brand-border-color;
+  color: #fff;
+
+  &:hover {
+    background: #E33832;
+    border-color: #C9322C;
+  }
+}
+
+%btn__size_m,
+.btn__size_m {
+  padding: 7px 15px;
+  font-size: 15px;
+}
+
+%btn__size_l,
+.btn__size_l {
+  padding: 11px 20px;
+  font-size: 17px;
+}
+
+.btn {
+  @extend %btn-base;
+  @extend %btn-skin-red;
+}
+
+.btn__info {
+  background: #ccdde7;
+  border-color: #ccdde7;
+  color: #064375;
+
+  &:hover {
+    background: lighten(#ccdde7, 10%);
+    border-color: lighten(#ccdde7, 10%);
+  }
+}
+
+.btn__glass {
+  border: 1px solid;
+  color: #fff;
+  background: rgba(#000, 0.1);
+}
+
+.btn-restart {
+  @extend %btn-base;
+  @extend .btn__glass;
+
+  &:before {
+    @include icon(btn-restart);
+    position: relative;
+    top: 1px;
+    margin: 0 10px 0 0;
+  }
+}

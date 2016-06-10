@@ -1,0 +1,13 @@
+extends ./templates/layout.jade
+
+block title
+  title Спланировать ремонт
+
+block content
+  .posts
+    .posts_title Cпланируйте
+
+    .post-list(data-component="posts")
+
+    a.btn(href="/finances.html") Спланировать финансы
+    a.btn-restart(href="/") Пройти тест еще раз

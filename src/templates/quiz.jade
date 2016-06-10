@@ -1,8 +1,7 @@
-div(data-component="quiz", data-options='')
-  .js-quizView
-    .quiz.quiz-intro
-      .quiz_bg(style='background-image: url(#{ @quiz.logo_url })')
-
-      .quiz_title= title
-      .quiz_desc= description
-      .quiz-intro_start.js-quizStart Начать тест
+.js-quizView
+  .quiz
+    .quiz_length=length
+    .quiz_duration= duration
+    .quiz_title= title
+    .quiz_desc= description
+    a.quiz_start.js-quizStart Начать тест

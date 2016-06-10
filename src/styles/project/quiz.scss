@@ -1,0 +1,141 @@
+.quiz {
+  margin: 87px 0 0;
+
+  @include bp(768) {
+    margin: 142px 0 0;
+    text-align: center;
+  }
+}
+
+.question_title,
+.answers_item,
+.quiz_length,
+.quiz_duration,
+.quiz_title,
+.quiz_desc,
+.quiz_start,
+.result_title,
+.result_description,
+.result .btn,
+.result_foot {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: .2s ease-in;
+}
+
+.answers_item:nth-child(1),
+.quiz_title,
+.result_description {
+  transition-delay: .1s;
+}
+
+.answers_item:nth-child(2),
+.quiz_desc,
+.result .btn {
+  transition-delay: .2s;
+}
+
+.answers_item:nth-child(3),
+.quiz_start,
+.quiz-social {
+  transition-delay: .3s;
+}
+
+.is-ready {
+  .question_title,
+  .answers_item,
+  .quiz_length,
+  .quiz_duration,
+  .quiz_title,
+  .quiz_desc,
+  .quiz_start,
+  .result_title,
+  .result_description,
+  .result .btn,
+  .result_foot {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.is-hidding {
+  .question_title,
+  .answers_item,
+  .quiz_length,
+  .quiz_duration,
+  .quiz_title,
+  .quiz_desc,
+  .quiz_start,
+  .result_title,
+  .result_description,
+  .result .btn,
+  .result_foot {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+.quiz_title {
+  margin: 23px 0 9px;
+  font-size: 24px;
+  line-height: 1.2;
+
+  @include bp(768) {
+    margin: 17px 0 22px;
+    font-size: 42px;
+  }
+}
+
+.quiz_desc {
+  margin: auto;
+  font-size: 18px;
+  line-height: 24px;
+
+  @include bp(768) {
+    max-width: 530px;
+  }
+}
+
+.quiz_duration,
+.quiz_length {
+  display: inline-block;
+  font-size: 13px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 600;
+
+  &:before {
+    position: relative;
+    top: -2px;
+    vertical-align: top;
+  }
+}
+
+.quiz_duration {
+  margin-left: 24px;
+
+  &:before {
+    @include icon(quiz-duration)
+    margin: 0 5px 0 0;
+  }
+}
+
+.quiz_length {
+  &:before {
+    @include icon(quiz-length)
+    margin: 0 8px 0 0;
+  }
+}
+
+.quiz_start {
+  @extend %btn-base;
+  @extend %btn-skin-red;
+  @extend %btn__size_l;
+  margin: 20px 0 0;
+  width: 100%;
+
+  @include bp(768) {
+    margin: 43px 0 0;
+    max-width: 236px;
+  }
+}

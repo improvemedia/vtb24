@@ -1,0 +1,198 @@
+.credits {
+  text-align: center;
+}
+
+@mixin transition-delayer($delay, $count) {
+  @for $i from 1 through $count {
+    &:nth-child(#{$i}) {
+      transition-delay: $i * 0.1s;
+    }
+  }
+}
+
+.credit_back {
+  @extend %btn-base;
+  @extend .btn__glass;
+  display: block;
+  margin: 30px auto 0;
+  max-width: 240px;
+  font-size: 14px;
+}
+
+.credit-cover {
+  @include transition-delayer(0.1, 3);
+  opacity: 0;
+  transition: .25s ease-in;
+
+  .credit:first-child & {
+    transform: translateX(-20px);
+  }
+
+  .credit:last-child & {
+    transform: translateX(20px);
+  }
+
+  .is-ready & {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+}
+
+.credit-cover {
+  position: relative;
+  display: inline-block;
+  padding: 106px 0 0;
+  width: 260px;
+  min-height: 180px;
+  font-size: 18px;
+  border: 1px solid #fff;
+  text-align: center;
+
+  &:before {
+    @include stretched-centred;
+    bottom: 70px;
+  }
+
+  .credit:not(.is-active) & {
+    cursor: pointer;
+  }
+}
+
+.credit-cover_label {
+  margin: 0 0 4px;
+  font-size: 18px;
+  display: none;
+
+  .is-his & {
+    display: block;
+  }
+}
+
+.credit-cover_sup {
+  margin: 3px 0;
+  font-size: 15px;
+}
+
+.credit-cover__smart {
+  &:before {
+    @include icon(credit-smart, b)
+  }
+}
+
+.credit-cover__fast {
+  &:before {
+    @include icon(credit-fast, b)
+  }
+}
+
+.credit-cover__big {
+  &:before {
+    @include icon(credit-big, b)
+  }
+}
+
+.credit-cover_title {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.credit_meta {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 10px;
+}
+
+.credit_meta-value {
+  font-size: 18px;
+  color: #ef242a;
+}
+
+.credit_meta-label {
+  color: #ccdde7;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.credit_desc {
+  margin: 31px 0 36px;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 0 40px;
+}
+
+@include lp(768) {
+  .credits {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0;
+  }
+
+  /* hack JS styles */
+  .credit {
+    position: static !important;
+    margin-bottom: 80px;
+
+    &.is-his {
+      order: -1;
+    }
+  }
+
+  .credit_body {
+    display: block !important;
+    margin: 25px 0 0;
+  }
+}
+
+@include bp(768) {
+  .credits {
+    .btn {
+      width: 190px;
+      margin: 0 10px;
+    }
+  }
+
+  .credit {
+    vertical-align: top;
+    text-align: center;
+    transform: scale(0.78);
+    transition: transform 0.2s;
+
+    &.is-active {
+      transform: scale(1);
+    }
+  }
+
+  .credit-cover {
+    vertical-align: middle;
+    padding: 120px 0 0;
+    width: 300px;
+    height: 240px;
+    font-size: 26px;
+
+    &:before {
+      bottom: 100px;
+    }
+  }
+
+  .credit-cover_sup {
+    margin: 11px 30px 0;
+  }
+
+  .credit-cover_label ~ .credit-cover_sup {
+    margin-top: 2px;
+  }
+
+  .credit_body {
+    position: absolute;
+    display: none;
+    margin: 33px -105px 0;
+  }
+
+  .credit_meta-value {
+    font-size: 30px;
+  }
+
+  .credit_meta-label {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,10 @@
+.question.js-quizQuestion
+  .question_title= title
+
+  ul.answers.js-quizAnswers
+    each variant in variants
+      li.answers_item.js-quizAnswer
+        label
+          input(type="radio", name="variant" data-variant=variant.result)
+          span
+            = variant.title

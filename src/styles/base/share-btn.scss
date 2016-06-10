@@ -1,0 +1,108 @@
+.quiz-social {
+  margin: 35px auto 0;
+
+  .share-btn {
+    @include core-btn;
+    margin: 0 10px;
+    padding: 7px 12px;
+    border-radius: 2px;
+    line-height: 20px;
+    font-size: 13px;
+
+    position: relative;
+    padding: 2px 10px;
+    color: #fff;
+    vertical-align: top;
+    text-align: left;
+
+    &:before {
+      position: relative;
+      bottom: 2px;
+      margin: 0 8px 0 0;
+      vertical-align: middle;
+    }
+  }
+
+  .share-btn_count {
+    display: inline-block;
+    margin-left: 5px;
+
+    &:before {
+      content: '|';
+      margin: 0 5px 0 0;
+    }
+
+    &.is-loading:after {
+      opacity: 1;
+    }
+  }
+
+  .share-btn__ok {
+    background: #ed812b;
+
+    &:before {
+      @include icon(share-btn-ok, 'ib', 'retina');
+    }
+
+    &:hover {
+      background: shade(#ed812b, 15)
+    }
+  }
+
+  .share-btn__vk {
+    background: rgb(94,131,170);
+
+    &:before {
+      @include icon(share-btn-vk, 'ib', 'retina');
+    }
+
+    &:hover {
+      background: shade(rgb(94,131,170), 15)
+    }
+  }
+
+  .share-btn__fb {
+    margin-left: 20px;
+    background: #475e93;
+
+    &:before {
+      @include icon(share-btn-fb, 'ib', 'retina');
+    }
+
+    &:hover {
+      background: shade(rgb(71,94,147), 15)
+    }
+  }
+}
+
+.quiz-social_title {
+  margin: 0 0 15px 0;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+
+.share-btn_counter {
+  display: inline-block;
+
+  &:before {
+    margin: 0 4px;
+    content: '|'
+  }
+}
+
+@include bp(768) {
+  .share-btn {
+    &:before {
+      margin-right: 40px;
+    }
+  }
+
+  .share-btn__fb {
+    margin-left: 59px;
+
+    &:before {
+      margin-right: 46px;
+    }
+  }
+}

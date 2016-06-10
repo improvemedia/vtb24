@@ -1,0 +1,114 @@
+$sprite: (
+	btn-restart: (
+		offset-x: -146px,
+		offset-y: -141px,
+		width: 12px,
+		height: 14px,
+	),
+	credit-big: (
+		offset-x: -161px,
+		offset-y: -59px,
+		width: 44px,
+		height: 61px,
+	),
+	credit-fast: (
+		offset-x: -161px,
+		offset-y: 0px,
+		width: 57px,
+		height: 53px,
+	),
+	credit-smart: (
+		offset-x: 0px,
+		offset-y: -141px,
+		width: 47px,
+		height: 47px,
+	),
+	header-close: (
+		offset-x: -83px,
+		offset-y: -163px,
+		width: 18px,
+		height: 18px,
+	),
+	header-promo-logo: (
+		offset-x: 0px,
+		offset-y: -90px,
+		width: 96px,
+		height: 45px,
+	),
+	logo-invert: (
+		offset-x: 0px,
+		offset-y: -45px,
+		width: 155px,
+		height: 39px,
+	),
+	logo: (
+		offset-x: 0px,
+		offset-y: 0px,
+		width: 155px,
+		height: 39px,
+	),
+	quiz-duration: (
+		offset-x: -89px,
+		offset-y: -141px,
+		width: 29px,
+		height: 16px,
+	),
+	quiz-length: (
+		offset-x: -124px,
+		offset-y: -141px,
+		width: 16px,
+		height: 16px,
+	),
+	share-btn-fb: (
+		offset-x: -123px,
+		offset-y: -163px,
+		width: 8px,
+		height: 16px,
+	),
+	share-btn-fb2x: (
+		offset-x: -128px,
+		offset-y: -90px,
+		width: 16px,
+		height: 32px,
+	),
+	share-btn-ok: (
+		offset-x: -107px,
+		offset-y: -163px,
+		width: 10px,
+		height: 16px,
+	),
+	share-btn-ok2x: (
+		offset-x: -102px,
+		offset-y: -90px,
+		width: 20px,
+		height: 32px,
+	),
+	share-btn-tw: (
+		offset-x: -164px,
+		offset-y: -141px,
+		width: 12px,
+		height: 10px,
+	),
+	share-btn-tw2x: (
+		offset-x: -53px,
+		offset-y: -163px,
+		width: 24px,
+		height: 20px,
+	),
+	share-btn-vk: (
+		offset-x: -161px,
+		offset-y: -126px,
+		width: 15px,
+		height: 8px,
+	),
+	share-btn-vk2x: (
+		offset-x: -53px,
+		offset-y: -141px,
+		width: 30px,
+		height: 16px,
+	),
+);
+
+$spritesheet-width: 218px;
+$spritesheet-height: 188px;
+$spritesheet-image: "sprite.png";

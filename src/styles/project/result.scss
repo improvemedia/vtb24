@@ -1,0 +1,42 @@
+.result {
+  text-align: center;
+
+  .btn {
+    display: block;
+    margin: 35px auto 0;
+
+    @include bp(768) {
+      max-width: 460px;
+    }
+  }
+}
+
+.result_title {
+  margin: 20px auto 8px;
+  max-width: 440px;
+  font-size: 26px;
+  text-align: center;
+}
+
+.section-title {
+  @include lateral-line(10px, -1px, #fff);
+  font-size: large;
+  margin: 60px 0;
+  text-transform: uppercase;
+}
+
+.result_description {
+  max-width: 470px;
+  margin: auto;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.result_foot {
+  margin: 30px 0;
+}
+
+.result_restart {
+  @extend .btn-restart;
+  margin: 60px 0 0;
+}

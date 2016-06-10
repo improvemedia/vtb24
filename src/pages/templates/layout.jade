@@ -1,13 +1,21 @@
 doctype html
 html
   head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
     block title
-      title Default title
+      title К какому ремонту вы готовы?
     link(rel="stylesheet" href="/assets/main.css")
   body
+    .video-bg
+      video(autoplay loop)
+        source(src="/assets/bg-l.mp4" type="video/mp4")
+        source(src="/assets/bg-l.webm" type="video/webm")
+
     include ../partials/header.jade
-    block content
+
+    #page.main.container
+      block content
 
     script(src='/assets/templates.js')
     script(src='/assets/main.js')
-

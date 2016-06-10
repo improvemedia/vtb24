@@ -1,3 +1,50 @@
+@import 'modules/reset';
+@import 'modules/tune';
+@import 'modules/icons';
+@import 'modules/mixins';
+@import 'sprite';
+@import 'base/fonts';
+@import 'base/header';
+@import 'base/video-bg';
+@import 'base/btn';
+@import 'base/share-btn';
+@import 'project/quiz';
+@import 'project/quiz-nav';
+@import 'project/question';
+@import 'project/result';
+@import 'project/credits';
+@import 'project/posts';
+
 body {
   margin: 0;
+  background: #000;
+  color: #fff;
+  text-shadow: 0.5px 0.866px 0px rgba(0, 0, 0, 0.15);
+  background: url('/assets/fallback-bg.jpg');
+  background-size: cover;
+  background-position: 63% center;
+
+  @include bp(760) {
+    background-position: center;
+  }
+}
+
+.container {
+  margin: 0 20px;
+
+  @include bp(960) {
+    margin: auto;
+    width: 940px;
+  }
+}
+
+.header {
+  z-index: 2;
+}
+
+.main {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  padding: 0 0 40px;
 }

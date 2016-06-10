@@ -1,0 +1,4 @@
+.quiz-nav
+  each item in items
+    .quiz-nav_item.js-quizGoTo(class=current === item ? 'is-active' : '')
+      span= item + 1

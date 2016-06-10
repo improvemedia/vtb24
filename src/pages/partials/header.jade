@@ -1,16 +1,24 @@
-.header
-  .header_logo
+.header(data-component="header")
+  .container
+    .header_toggler.js-headerToggler
+      span
+      span
+      span
 
-  ul.header_nav
-    li
-      a Моя лента
-    li
-      a Идеи
-    li
-      a Магазин
-    li
-      a Фото
-    li
-      a Советы
-    li
-      a Профи
+    a.header_logo(href="/")
+
+    ul.header_nav
+      li.header_nav_item
+        a.header_nav_link(href="//inmyroom.ru/my/feed" target="_blank") Моя лента
+      li.header_nav_item
+        a.header_nav_link(href="//inmyroom.ru/posts" target="_blank") Идеи
+      li.header_nav_item
+        a.header_nav_link(href="//inmyroom.ru/products" target="_blank") Магазин
+      li.header_nav_item
+        a.header_nav_link(href="//inmyroom.ru/photos" target="_blank") Фото
+      li.header_nav_item
+        a.header_nav_link(href="//inmyroom.ru/discussions" target="_blank") Советы
+      li.header_nav_item
+        a.header_nav_link(href="//inmyroom.ru/profi" target="_blank") Профи
+
+    a.header_promo-logo(href="http://www.vtb24.ru/personal/Pages/default.aspx" target="_blank")

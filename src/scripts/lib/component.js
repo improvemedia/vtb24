@@ -2,8 +2,8 @@
   if (typeof exports !== 'undefined' ) {
     var $;
     try { $ = require('jquery'); } catch (e) {}
-    factory($, window)
   }
+  factory($, window)
 }(function($, window) {
   var extend = function(Parent, proto) {
     var F = function() {
