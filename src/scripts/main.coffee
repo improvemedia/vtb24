@@ -40,10 +40,11 @@ appendToPage = (content) ->
 page('/', -> appendToPage(makeComponent('quiz')))
 
 page('/result', ->
+  ga('send', 'event', 'quiz', 'finish', 'yeah')
   page('/') unless key = docCookies.getItem('resultQuizKey')
   result = data.results[docCookies.getItem('resultQuizKey')]
   result.url = location.protocol + "//" + location.host
-  result.image = location.protocol + "//" + location.host + '/assets/share.jpg'
+  result.image = location.protocol + "//" + location.host + result.image
   appendToPage(Templates.result(result))
 )
 

@@ -6,6 +6,10 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-77654161-1', 'auto');
 ga('send', 'pageview');
 
+setTimeout(function() {
+  ga('send', 'event', 'timer', 'read');
+}, 30000);
+
 $(document).on('click', '.js-quizStart', function() {
   ga('send', 'event', 'quiz', 'start', 'start');
 })
