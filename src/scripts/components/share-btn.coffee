@@ -70,8 +70,8 @@ Component.define 'shareBtn',
   # Api
 
   getFBCount: (url, callback) ->
-    $.getJSON 'https://graph.facebook.com/fql?q=SELECT%20share_count%20FROM%20link_stat%20WHERE%20url=%27' + url + '%27&callback=?', (data) ->
-      callback(if data && data.data && data.data[0] then data.data[0].share_count else 0)
+    $.getJSON "https://graph.facebook.com/?id=#{url}", (data) ->
+      callback(data?.share?.share_count || 0)
 
   getVKCount: (url, callback) ->
     window.VK = Share: {}
